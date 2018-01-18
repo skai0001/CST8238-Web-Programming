@@ -1,0 +1,17 @@
+CREATE DATABASE Hasan_cst8238;
+GRANT USAGE ON *.* TO Hasan_cst8238@localhost IDENTIFIED BY 'hsn@1989';
+GRANT ALL PRIVILEGES ON Hasan_cst8238.* TO Hasan_cst8238@localhost;
+FLUSH PRIVILEGES;
+
+USE Hasan_cst8238;
+
+CREATE TABLE employee(
+	EmployeeId int not null AUTO_INCREMENT,
+	FirstName VARCHAR(50) NOT NULL,
+	LastName VARCHAR(50) NOT NULL,
+    EmailAddress VARCHAR(255)NULL,
+    TelephoneNumber VARCHAR(20) NULL,
+    SocialInsuranceNumber VARCHAR(11) NULL,
+    Password VARCHAR(50) NULL,
+	PRIMARY KEY (EmployeeId)
+	);

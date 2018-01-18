@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<style>
+#panel, #flip {
+    padding: 5x;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Assignment3 - Task1</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+</head>
+
+
+<body>
+<h3>Assignment3-Part1 - Length Conversion</h3>
+    <div id="flip">Length Conversion</div>
+    <div id="panel">This program converts from inch to centimeter and vice versa</div>
+
+    <button onclick = "convert()">Convert!</button>
+
+    <p id = "conversion"></p>
+    <script type="text/javascript">
+
+
+    function convert() {
+      var inch;
+      var cent;
+      var num = prompt("Please enter a length unit(1: to convert into inch, 2: To convert into centimeter)"," ");
+        if (num != null && (num == 1 || num == 2) ){
+
+          if (num == 1){
+            var num2 = prompt("Please enter a lenght value to be converted to inch", " ");
+            inch = num2/2.54;
+            var i = inch.toPrecision(4);
+            alert(num2+" centimeters converted to "+i+ " inches");
+          }else if (num == 2){
+            var num2 = prompt("Please enter a lenght value to be converted to inch", " ");
+            cent = num2/0.39370;
+            var c = cent.toPrecision(4);
+            alert(num2+" inches converted to "+c+ " centimeters");
+          }
+
+
+        }
+    }
+
+    $(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("fast");
+    });
+});
+
+$(document).ready(function(){
+$("#flip").dblclick(function(){
+    $("#panel").slideUp("fast");
+});
+});
+
+
+
+
+
+  </script>
+
+</body>
+</html>
